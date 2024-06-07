@@ -1,4 +1,4 @@
-name: main
+name: Test
 run-name: ${{ github.actor }}
 on: [push]
 jobs:
@@ -8,4 +8,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Test
-        run: docker-compose -f "docker-compose.test.yml" up --build
+        run: docker-compose -f "docker-compose.test.yml" up --build --exit-code-from app
