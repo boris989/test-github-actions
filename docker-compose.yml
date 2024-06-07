@@ -2,9 +2,7 @@ version: '3.5'
 
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: redbit17/test:f21fb03
     container_name: nest-docker-postgres
     ports:
       - '3000:3000'
